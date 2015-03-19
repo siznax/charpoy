@@ -2,6 +2,7 @@ cssselect==0.9.1
 Flask==0.10.1
 Flask-Bower==1.0.1
 frag2text==0.0.5
+gunicorn==19.3.0
 html2text==2015.2.18
 html5lib==0.999
 itsdangerous==0.24
