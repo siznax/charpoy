@@ -28,7 +28,7 @@ div.cell {
 
     width:32px;
     height:32px;
-    line-height:32px;
+    line-height:38px;
     font-size:24px;
     border-radius:32px;
 
@@ -64,4 +64,7 @@ div#info p::first-letter {
     font-size:24px;
     margin-right:16px;
     margin-bottom:8px;
+}
+.clicked {
+    border:1px solid orange;
 }
