@@ -66,5 +66,5 @@ div#info p::first-letter {
     margin-bottom:8px;
 }
 .clicked {
-    border:1px solid orange;
+    border:2px solid orange;
 }
