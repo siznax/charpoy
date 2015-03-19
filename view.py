@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import logging
+import sys
  
 from flask import Flask, render_template, jsonify, make_response
 from flask_bower import Bower
@@ -9,6 +11,9 @@ __date__ = "Mar 2015"
 
 app = Flask(__name__)
 Bower(app)
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 @app.route('/')
 def index():
