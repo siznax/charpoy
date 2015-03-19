@@ -1,0 +1,26 @@
+{
+  "name": "charpoy",
+  "version": "0.0.0",
+  "authors": [
+    "siznax"
+  ],
+  "description": "Unicode/Wikipedia mashup",
+  "keywords": [
+    "unicode",
+    "wikipedia",
+    "frag2text"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/siznax/charpoy",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
