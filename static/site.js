@@ -24,16 +24,16 @@ var Charpoy = function(data) {
 };
 
 Charpoy.prototype.console = function(message) {
-    var dims = $(window).width() + ' x ' + $(window).height();
+    var dims = '(' + $(window).width() + 'x' + $(window).height() + ')';
     var cells = ' [' + this.nCols + ', ' + this.nRows + ']';
     var ncells = ' ' + this.nCols * this.nRows + ' cells';
     var chars = ' ' + this.data.length + ' chars';
-    $("div#console").html(dims + cells + ncells + chars);
+    $("div#console").html('debug: ' + dims + cells + ncells + chars);
 };
 
 Charpoy.prototype.update = function() {
     this.nCols = Math.floor($(window).width() / this.pxWidth) - 2;
-    this.nRows = Math.floor($(window).height() / this.pxWidth) - 2;
+    this.nRows = Math.floor($(window).height() / this.pxWidth) - 1;
     if (this.DEBUG) {
         this.console();
     }
@@ -47,7 +47,7 @@ Charpoy.prototype.append = function(tag, _id, _cls, content) {
     if (this.DEBUG) {
         console.log(div);
     }
-    $("body").append(div);
+    $("div#view").append(div);
 }
 
 Charpoy.prototype.position = function(_id) {
@@ -130,10 +130,11 @@ $(function() {
         function mute_cells(obj) {
             $("div.cell").css('background', poy.bg_color);
             $("div.cell a").css('color', 'black');
-            obj.css('color', poy.cell_hover_a_color);
         }
 
         function mark_clicked(obj) {
+            obj.css('color', poy.clicked_color);
+            obj.parent().css('background', 'black');
             $("div#" + obj.parent().attr("id")).addClass("clicked");
         }
 
@@ -147,9 +148,6 @@ $(function() {
 
             var a = $('div#' + a_id);
             var b = $('div#' + b_id);
-
-            a.css('background', wombat['gray']);
-            b.css('background', wombat['gray']);
 
             a.animate({'top': b_top})  // a.css('top', b_top);
             b.css('top', a_top);
@@ -172,7 +170,7 @@ $(function() {
             if (DEBUG) {
                 console.log("GET " + url);
             }
-            var request = $.ajax({url: url, timeout: 5000});
+            var request = $.ajax({url: url});
             request.done(function(data) {
                 if (DEBUG) { console.log(data.result); }
                 $("div#info").html(data.result);
