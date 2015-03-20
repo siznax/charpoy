@@ -35,7 +35,8 @@ def info(url):
         html = html.replace('</p>', insert)
         return jsonify(result=html)
     except Exception as detail:
-        return jsonify(result="&#x2602; Sorry, no info for %s" % thing)
+        link = '<a target=_blank href="%s">%s</a>' % (url, thing)
+        return jsonify(result="&#x2602; Sorry, no info for %s" % link)
 
 if __name__ == "__main__":
     app.run(port=5006, debug=True)
