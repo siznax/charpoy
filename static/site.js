@@ -178,7 +178,11 @@ $(function() {
                 $("div#info").html(data.result);
             });
             request.fail(function() {
-                $("div#info").html("Failed to get info on " + href.split('/')[-1]);
+                var href = this.url.split('/info/').pop();
+                var thing = href.split('/').pop();
+                var link = '<a href="' + href + '" target=_blank>' + thing + '</a>';
+                var msg = "Failed to get info on " + link;
+                $("div#info").html(msg);
             });
             request.always(function() {
             });
