@@ -116,5 +116,5 @@ Chars.prototype.all = function() {
         .concat(this.letterlike)
         // .concat(this.misc)
         .concat(this.runic);
-    return shuffle(this.kangxi);
+    return shuffle(chars);
 }
