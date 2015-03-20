@@ -1,22 +1,24 @@
 /* siznax 2015 */
 
 body {
-    margin:32px;
+    margin:0;
     padding:0;
     background:#242424;
-    position:absolute;
-    width:100%;
-    height:100%;
 }
 a {
     text-decoration:none;
 }
 div#console {
-    padding:1em;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    color:dimgray;
+    padding:8px;
+    color:#8ac6f2;
+}
+div#view {
     position:absolute;
-    bottom:0;
-    right:0;
-    color:white;
+    margin:32px;
 }
 div.cell {
     position:absolute;
@@ -46,7 +48,7 @@ div#info_layer {
 }
 div#info {
     width:66%;
-    margin-top:64px;
+    margin-top:96px;
     margin-left:auto;
     margin-right:auto;
     padding:1em;
@@ -54,6 +56,7 @@ div#info {
     background:whitesmoke;
     z-index:2;
     border-radius:8px;
+    font-size:1.4em;
 }
 div#info p {
     margin-top:0;
@@ -61,10 +64,7 @@ div#info p {
 }
 div#info p::first-letter {
     float:left;
-    font-size:24px;
-    margin-right:16px;
-    margin-bottom:8px;
-}
-.clicked {
-    border:2px solid orange;
+    font-size:2em;
+    margin-right:0.4em;
+    margin-bottom:0.2em;
 }
