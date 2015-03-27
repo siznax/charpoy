@@ -62,7 +62,7 @@ div#info p {
     margin-top:0;
     margin-bottom:0;
 }
-div#info p::first-letter {
+div#charpoy {
     float:left;
     font-size:2em;
     margin-right:0.4em;

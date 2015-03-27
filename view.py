@@ -33,7 +33,7 @@ def info(url):
 
         xpath = '//*[@id="mw-content-text"]/p[1]'
         html = frag2text(url, 'xpath', xpath, raw=True)
-        html = html.replace('<p>', '<p>' + thing)
+        html = html.replace('<p>', '<p><div id=charpoy>' + thing + '</div>')
         html = html.replace('<a', '<span').replace('</a>', '</span>')
         insert = (' <a target=_blank href="%s">%s</a></pre></p>' % (url, url))
         html = html.replace('</p>', insert)
