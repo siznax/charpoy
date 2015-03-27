@@ -33,7 +33,7 @@ Charpoy.prototype.console = function(message) {
 
 Charpoy.prototype.update = function() {
     this.nCols = Math.floor($(window).width() / this.pxWidth) - 2;
-    this.nRows = Math.floor($(window).height() / this.pxWidth) - 1;
+    this.nRows = Math.floor($(window).height() / this.pxWidth) - 2;
     if (this.DEBUG) {
         this.console();
     }
