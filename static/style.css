@@ -9,16 +9,25 @@ a {
     text-decoration:none;
 }
 div#console {
+    margin-top:8px;
     margin-left:auto;
     margin-right:auto;
-    text-align:center;
-    color:dimgray;
     padding:8px;
-    color:#8ac6f2;
+    text-align:center;
+    font-family:sans-serif;
+    font-weight:100;
+    font-size:16px;
+    color:#99968b;
+    color:#cae682;
+    opacity:0.6;
+}
+span#title {
+    color:#ffc125;
 }
 div#view {
     position:absolute;
     margin:32px;
+    margin-top:40px;
 }
 div.cell {
     position:absolute;

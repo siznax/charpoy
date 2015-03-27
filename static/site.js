@@ -3,6 +3,7 @@
  */
 
 var DEBUG = false;
+var VERBOSE = true;
 
 /**
  * expects a shuffled array of chars
@@ -23,7 +24,7 @@ var Charpoy = function(data) {
     }
 };
 
-Charpoy.prototype.console = function(message) {
+Charpoy.prototype.show_debug = function() {
     var dims = '(' + $(window).width() + 'x' + $(window).height() + ')';
     var cells = ' [' + this.nCols + ', ' + this.nRows + ']';
     var ncells = ' ' + this.nCols * this.nRows + ' cells';
@@ -31,11 +32,21 @@ Charpoy.prototype.console = function(message) {
     $("div#console").html('debug: ' + dims + cells + ncells + chars);
 };
 
+Charpoy.prototype.show_verbose = function() {
+    var ncells = this.nCols * this.nRows;
+    var nchars = this.data.length;
+    $("div#console").html("<span id=title>चारपाई</span> showing " +
+                          ncells + "/" + nchars + " (resize for more/less)");
+};
+
 Charpoy.prototype.update = function() {
     this.nCols = Math.floor($(window).width() / this.pxWidth) - 2;
     this.nRows = Math.floor($(window).height() / this.pxWidth) - 2;
     if (this.DEBUG) {
-        this.console();
+        this.show_debug();
+    }
+    this.show_verbose();
+    if (this.VERBOSE) {
     }
 }
 
