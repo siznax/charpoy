@@ -36,7 +36,8 @@ Charpoy.prototype.show_verbose = function() {
     var ncells = this.nCols * this.nRows;
     var nchars = this.data.length;
     $("div#console").html("<span id=title>चारपाई</span> showing " +
-                          ncells + "/" + nchars + " (resize for more/less)");
+                          ncells + "/" + nchars +
+                          " (resize+reload for more/less)");
 };
 
 Charpoy.prototype.update = function() {
