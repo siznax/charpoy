@@ -10,4 +10,6 @@ render well and duplicates (or redirects). So, I’ll want to find
 the subset of single-character Wikipedia titles that have unique
 articles. Then, I’ll want to cut out characters that may not render
 well, and then truncate sets that are too dominant in a small random
-selection. This could go on for a while... feel free to contribute!
+selection. Now I'm learning about all kinds of [interesting Unicode 
+scripts](http://en.wikipedia.org/wiki/Script_%28Unicode%29). This
+could go on for a while... feel free to contribute!
