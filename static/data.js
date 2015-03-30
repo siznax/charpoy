@@ -108,7 +108,6 @@ Chars.prototype.runic = "ᚠ ᚡ ᚢ ᚣ ᚤ ᚥ ᚦ ᚧ ᚨ ᚩ ᚪ ᚫ ᚬ ᚭ
 Chars.prototype.all = function() {
     var chars = this.alphanum
         .concat(this.braille)
-        // .concat(this.cjk_enclosed)
         .concat(this.currency)
         .concat(this.cyrillic)
         .concat(this.devaganari)
@@ -122,5 +121,5 @@ Chars.prototype.all = function() {
         .concat(this.misc)
         .concat(this.punctuation)
         .concat(this.runic);
-    return shuffle(this.bopomofo);
+    return shuffle(chars);
 }
