@@ -35,7 +35,7 @@ def info(url):
         html = frag2text(url, 'xpath', xpath, raw=True)
         html = html.replace('<p>', '<p><div id=charpoy>' + thing + '</div>')
         html = html.replace('<a', '<span').replace('</a>', '</span>')
-        insert = (' <a target=_blank href="%s">%s</a></pre></p>' % (url, url))
+        insert = (' <a target=_blank href="%s">%s</a></p>' % (url, url))
         html = html.replace('</p>', insert)
 
         return jsonify(result=html)
