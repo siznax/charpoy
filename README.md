@@ -9,8 +9,7 @@ subset of Unicode (23K/110K) but it’s full of characters that may not
 render well and duplicates (or redirects). So, I’ll want to find
 the subset of single-character Wikipedia titles that have unique
 articles. Then, I’ll want to cut out characters that may not render
-well, and then truncate sets that are too dominant in a small random
-selection. Now I'm learning about all kinds of [fascinating Unicode 
-scripts](http://en.wikipedia.org/wiki/Script_%28Unicode%29)...
+well, and then truncate sets that are over-represented in a small
+random selection. Now I'm learning about all kinds of [fascinating
+Unicode scripts](http://en.wikipedia.org/wiki/Script_%28Unicode%29)...
 feel free to contribute!
-
