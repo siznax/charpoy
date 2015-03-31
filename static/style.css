@@ -21,7 +21,7 @@ div#console {
     color:#cae682;
     opacity:0.6;
 }
-span#title {
+div#console a {
     color:#ffc125;
 }
 div#view {
