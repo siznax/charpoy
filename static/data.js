@@ -104,6 +104,8 @@ Chars.prototype.katakana = "ア イ ウ エ オ カ ガ キ ギ ク グ ケ ゲ 
 // http://www.csun.edu/~ll51106/top300.html
 Chars.prototype.han300 = "安 八 把 百 包 报 北 被 本 比 便 表 别 并 不 部 才 产 场 常 长 车 成 出 处 此 次 从 达 打 大 代 但 当 到 道 德 得 的 等 地 第 点 电 定 东 动 都 度 对 多 而 儿 二 发 法 反 方 分 风 服 干 感 高 告 个 各 给 更 工 公 古 股 关 光 广 国 果 过 海 好 和 合 黑 很 红 后 华 化 话 还 回 会 活 或 机 几 己 济 记 家 加 价 间 见 件 将 交 教 接 解 界 金 进 京 经 九 酒 就 军 开 看 可 克 口 来 劳 老 理 里 利 立 力 联 两 了 林 流 路 马 么 没 每 美 门 们 面 民 明 名 目 那 南 难 内 能 你 年 女 票 品 平 期 七 其 起 企 气 钱 前 亲 青 情 请 球 去 全 却 然 让 人 认 日 如 入 三 色 山 上 少 社 身 深 声 生 师 十 时 什 实 识 使 世 事 是 市 收 手 受 数 说 斯 私 司 四 所 他 它 她 台 特 体 天 通 同 统 头 外 完 万 为 位 文 问 我 无 五 物 西 下 先 现 相 想 向 象 小 校 些 谢 新 心 信 形 行 学 样 要 也 业 一 已 以 意 因 应 用 由 有 又 于 与 元 原 员 月 再 在 摘 者 这 真 正 政 知 之 只 至 制 中 种 重 主 着 资 子 自 总 走 最 做 作".split(' ');
 
+Chars.prototype.latin_1 = "¡ ¢ £ ¤ ¥ ¦ § ¨ © ª « ¬ ­ ® ¯ ° ± ² ³ ´ µ ¶ · ¸ ¹ º » ¼ ½ ¾ ¿ À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ".split(' ');
+
 // [unichr(x) for x in range(0x2100,0x214f)]
 Chars.prototype.letterlike = "℀ ℁ ℂ ℃ ℄ ℅ ℆ ℇ ℈ ℉ ℊ ℋ ℌ ℍ ℎ ℏ ℐ ℑ ℒ ℓ ℔ ℕ № ℗ ℘ ℙ ℚ ℛ ℜ ℝ ℞ ℟ ℠ ℡ ™ ℣ ℤ ℥ Ω ℧ ℨ ℩ K Å ℬ ℭ ℮ ℯ ℰ ℱ Ⅎ ℳ ℴ ℵ ℶ ℷ ℸ ℹ ℺ ℻ ℼ ℽ ℾ ℿ ⅀ ⅁ ⅂ ⅃ ⅄ ⅅ ⅆ ⅇ ⅈ ⅉ ⅊ ⅋ ⅍ ⅎ".split(' ');
 
@@ -135,6 +137,7 @@ Chars.prototype.all = function() {
         .concat(this.hiragana)
         .concat(this.kangxi)
         .concat(this.katakana)
+        .concat(this.latin_1)
         .concat(this.letterlike)
         .concat(this.misc)
         .concat(this.punctuation)
