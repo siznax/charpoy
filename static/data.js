@@ -105,6 +105,9 @@ Chars.prototype.greek = "Ͳ Ͷ Έ Ή Ί Ό Ύ Ώ ΐ Α Β Γ Δ Ε Ζ Η Θ Ι �
 // http://en.wikipedia.org/wiki/Georgian_scripts
 Chars.prototype.georgian = "Ⴀ Ⴁ Ⴂ Ⴃ Ⴄ Ⴅ Ⴆ Ⴇ Ⴈ Ⴉ Ⴊ Ⴋ Ⴌ Ⴍ Ⴎ Ⴏ Ⴐ Ⴑ Ⴒ Ⴓ Ⴔ Ⴕ Ⴖ Ⴗ Ⴘ Ⴙ Ⴚ Ⴛ Ⴜ Ⴝ Ⴞ Ⴟ Ⴠ Ⴡ Ⴢ Ⴣ Ⴤ Ⴥ ა ბ გ დ ე ვ ზ თ ი კ ლ მ ნ ო პ ჟ რ ს ტ უ ფ ქ ღ ყ შ ჩ ც ძ წ ჭ ხ ჯ ჰ ჱ ჲ ჳ ჴ ჵ ჶ ჷ ჸ ჹ ჺ ჻".split(' ');
 
+// http://en.wikipedia.org/wiki/Gujarati_alphabet
+Chars.prototype.gujarati = "ઁ ં ઃ અ આ ઇ ઈ ઉ ઊ ઋ ઌ ઍ એ ઐ ઑ ઓ ઔ ક ખ ગ ઘ ઙ ચ છ જ ઝ ઞ ટ ઠ ડ ઢ ણ ત થ દ ધ ન પ ફ બ ભ મ ય ર લ ળ વ શ ષ સ હ ઼ ઽ ા િ ી ુ ૂ ૃ ૄ ૅ ે ૈ ૉ ો ૌ ્ ૐ ૠ ૡ ૢ ૣ ૦ ૧ ૨ ૩ ૪ ૫ ૬ ૭ ૮ ૯ ૱".split(' ');
+
 // [unichr(x) for x in range(0x05be,0x05f4)]
 Chars.prototype.hebrew = "א ב ג ד ה ו ז ח ט י ך כ ל ם מ ן נ ס ע ף פ ץ צ ק ר ש ת װ ױ".split(' ');
 
@@ -173,6 +176,7 @@ Chars.prototype.all = function() {
         .concat(this.ethiopic_a)
         .concat(this.greek)
         .concat(this.georgian)
+        .concat(this.gujarati)
         .concat(this.han300)
         .concat(this.hebrew)
         .concat(this.hiragana)
