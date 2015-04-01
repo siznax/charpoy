@@ -108,6 +108,9 @@ Chars.prototype.georgian = "Ⴀ Ⴁ Ⴂ Ⴃ Ⴄ Ⴅ Ⴆ Ⴇ Ⴈ Ⴉ Ⴊ Ⴋ Ⴌ 
 // http://en.wikipedia.org/wiki/Gujarati_alphabet
 Chars.prototype.gujarati = "અ આ ઇ ઈ ઉ ઊ ઋ ઌ ઍ એ ઐ ઑ ઓ ઔ ક ખ ગ ઘ ઙ ચ છ જ ઝ ઞ ટ ઠ ડ ઢ ણ ત થ દ ધ ન પ ફ બ ભ મ ય ર લ ળ વ શ ષ સ હ ઽ ા િ ી ૉ ો ૌ ૐ ૠ ૡ ૦ ૧ ૨ ૩ ૪ ૫ ૬ ૭ ૮ ૯ ૱".split(' ');
 
+// http://en.wikipedia.org/wiki/Gurmukhi_(Unicode_block)
+Chars.prototype.gurmukh = "ਅ ਆ ਇ ਈ ਉ ਊ ਏ ਐ ਓ ਔ ਕ ਖ ਗ ਘ ਙ ਚ ਛ ਜ ਝ ਞ ਟ ਠ ਡ ਢ ਣ ਤ ਥ ਦ ਧ ਨ ਪ ਫ ਬ ਭ ਮ ਯ ਰ ਲ ਲ਼ ਵ ਸ਼ ਸ ਹ ਿ ੀ ਖ਼ ਗ਼ ਜ਼ ੜ ਫ਼ ੦ ੧ ੨ ੩ ੪ ੫ ੬ ੭ ੮ ੯ ੲ ੳ ੴ".split(' ');
+
 // [unichr(x) for x in range(0x05be,0x05f4)]
 Chars.prototype.hebrew = "א ב ג ד ה ו ז ח ט י ך כ ל ם מ ן נ ס ע ף פ ץ צ ק ר ש ת װ ױ".split(' ');
 
@@ -177,6 +180,7 @@ Chars.prototype.all = function() {
         .concat(this.greek)
         .concat(this.georgian)
         .concat(this.gujarati)
+        .concat(this.gurmukh)
         .concat(this.han300)
         .concat(this.hebrew)
         .concat(this.hiragana)
