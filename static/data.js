@@ -162,6 +162,9 @@ Chars.prototype.punctuation = "― ‖ ‗ ‘ ’ ‚ ‛ “ ” „ ‟ † �
 // [unichr(x) for x in range(0x16A0,0x16FF)]
 Chars.prototype.runic = "ᚠ ᚡ ᚢ ᚣ ᚤ ᚥ ᚦ ᚧ ᚨ ᚩ ᚪ ᚫ ᚬ ᚭ ᚮ ᚯ ᚰ ᚱ ᚲ ᚳ ᚴ ᚵ ᚶ ᚷ ᚸ ᚹ ᚺ ᚻ ᚼ ᚽ ᚾ ᚿ ᛀ ᛁ ᛂ ᛃ ᛄ ᛅ ᛆ ᛇ ᛈ ᛉ ᛊ ᛋ ᛌ ᛍ ᛎ ᛏ ᛐ ᛑ ᛒ ᛓ ᛔ ᛕ ᛖ ᛗ ᛘ ᛙ ᛚ ᛛ ᛜ ᛝ ᛞ ᛟ ᛠ ᛡ ᛢ ᛣ ᛤ ᛥ ᛦ ᛧ ᛨ ᛩ ᛪ ᛫ ᛬ ᛭ ᛮ ᛯ ᛰ".split(' ');
 
+// http://en.wikipedia.org/wiki/Sinhala_(Unicode_block)
+Chars.prototype.sinhala = "අ ආ ඇ ඈ ඉ ඊ උ ඌ ඍ ඏ ඐ එ ඒ ඓ ඔ ඕ ඖ ක ඛ ග ඝ ඞ ඟ ච ඡ ජ ඣ ඤ ඥ ඦ ට ඨ ඩ ඪ ණ ඬ ත ථ ද ධ න ඳ ප ඵ බ භ ම ඹ ය ර ල ව ශ ෂ ස හ ළ ෆ ෳ ෴".split(' ');
+
 // http://en.wikipedia.org/wiki/Tibetan_(Unicode_block)
 Chars.prototype.tibetan = "ༀ ༁ ༂ ༃ ༄ ༅ ༆ ༇ ༈ ༉ ༊ ། ༎ ༏ ༐ ༑ ༒ ༓ ༔ ༕ ༖ ༗ ༘ ༡ ༢ ༣ ༤ ༥ ༦ ༧ ༨ ༩ ༪ ༫ ༬ ༭ ༮ ༯ ༰ ༱ ༲ ༳ ༴ ༶ ༸ ༺ ༻ ༼ ༽ ༾ ༿ ཀ ཁ ག གྷ ང ཅ ཆ ཇ ཉ ཊ ཋ ཌ ཌྷ ཎ ཏ ཐ ད དྷ ན པ ཕ བ བྷ མ ཙ ཚ ཛ ཛྷ ཝ ཞ ཟ འ ཡ ར ལ ཤ ཥ ས ཧ ཨ ཀྵ ཪ ཫ ཬ ྾ ྿ ࿀ ࿁ ࿂ ࿃ ࿄ ࿅ ࿇ ࿈ ࿉ ࿊ ࿋ ࿌ ࿎ ࿏ ࿐ ࿑ ࿒ ࿓ ࿔ ࿕ ࿖ ࿗ ࿘".split(' ');
 
@@ -200,6 +203,7 @@ Chars.prototype.all = function() {
         .concat(this.misc)
         .concat(this.punctuation)
         .concat(this.runic)
+        .concat(this.sinhala)
         .concat(this.tibetan);
     return shuffle(chars);
 }
