@@ -1,5 +1,6 @@
 /**
- * Unicode blocks for which Wikipedia responds with 301 => 404
+ * Unicode blocks that render okay on Mac OS X 10.10.2 and for which 
+ * Wikipedia responds with 301 => 404
  */
 
 // http://en.wikipedia.org/wiki/Aegean_Numbers_(Unicode_block)
