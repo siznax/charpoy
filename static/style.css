@@ -19,7 +19,7 @@ div#console {
     font-size:16px;
     color:#99968b;
     color:#cae682;
-    opacity:0.6;
+    opacity:1.0;
 }
 div#console a {
     color:#ffc125;
@@ -77,3 +77,36 @@ div#charpoy {
     margin-right:0.4em;
     margin-bottom:0.2em;
 }
+
+body#about {
+    margin:32px;
+    padding:32px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    overflow:none;
+    color:grey;
+}
+body#about a {
+    color:#cae682;
+}
+body#about p {
+    font-size:larger;
+    color:whitesmoke;
+}
+body#about dt {
+    font-size:x-large;
+    color:white;
+}
+body#about dt a {
+    font-size:smaller;
+    color:#cae682;
+}
+body#about dd, body#about dd a {
+    font-size:x-large;
+    color:grey;
+}
+body#about dd a:hover {
+    color:#ffc125;
+}
+
