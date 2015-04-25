@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1>About charpoy</h1>
+
+<p>Charpoy currently contains ({{nchars}}) characters in ({{nblocks}})
+  blocks based on
+  Wikipedia <a href="http://en.wikipedia.org/wiki/Category:Unicode_blocks">Unicode
+  blocks</a>,
+  excepting <a href="http://www.csun.edu/~ll51106/top300.html">han300</a>. Anyone
+  may contribute to (or ask questions about) this project via 
+  the <a href="https://github.com/siznax/charpoy">siznax/charpoy</a> 
+  Github repo.</p>
+  
+<dl>{% for item in data|sort %}
+  <dt>{{item}} <span style="color:gray;">&mdash;</span>
+   <a href="{{data[item]['href']}}">{{data[item]['href']}}</a>
+  <dd>{% for char in data[item]['chars'].split() %}<a target="_blank"
+   href="http://wikipedia.org/wiki/{{char|safe}}">{{char|safe}}</a>
+  {% endfor %}
+{% endfor %}
+</dl>
+
+{% endblock %}
