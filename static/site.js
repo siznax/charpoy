@@ -5,6 +5,54 @@
 var DEBUG = false;
 var VERBOSE = true;
 
+
+/** 
+ * https://github.com/jasonblewis/color-theme-wombat 
+ */
+var wombat = {
+    'fg':       "#f6f3e8",
+    'bg':       "#242424",
+    'green':    "#95e454", 
+    'green+1':  "#cae682",
+    'green+2':  "#4BC98A",
+    'red-1':    "#e5786d",
+    'red':      "#95e454",
+    'blue-2':   "#2e3436",
+    'blue-1':   "#64a8d8",
+    'blue':     "#8ac6f2",
+    'magenta':  "#cc99cc",
+    'orange-1': "#f57900",
+    'orange':   "#e65c00",
+    'orange+1': "#e9b96e",
+    'orange+2': "#ffc125",
+    'purple-1': "#ad7fa8",
+    'purple':   "#cc99cc",
+    'pink-1':   "#f283b6",
+    'pink':     "#F6B3DF",
+    'gray-1':   "#444444",
+    'gray':     "#424242",
+    'gray+1':   "#99968b"
+};
+
+
+/**
+ * Knuth-Fisher-Yates  http://bost.ocks.org/mike/shuffle/
+ */
+function shuffle(array) {
+
+    var m = array.length, t, i;
+
+    while (m) {
+        i = Math.floor(Math.random() * m--);
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+    }
+    
+    return array;
+}
+
+
 /**
  * expects a shuffled array of chars
  */
@@ -35,7 +83,7 @@ Charpoy.prototype.show_debug = function() {
 Charpoy.prototype.show_verbose = function() {
     var ncells = this.nCols * this.nRows;
     var nchars = this.data.length;
-    var href = 'https://github.com/siznax/charpoy';
+    var href = '/about';
     $("div#console").html("<a href=\"" + href + "\">चारपाई</a> " +
                           "showing " + ncells + "/" + nchars +
                           " (resize+reload for more/less)");
@@ -100,9 +148,13 @@ Charpoy.prototype.fill = function() {
 }
 
 $(function() {
-    $.getScript("/static/data.js", function() {
-        var chars = new Chars();
-        var poy = new Charpoy(chars.all());
+    $.getJSON("/static/chars.js", function(data) {
+        var chars = [];
+        $.each( data, function(key, val) {
+            var more = data[key]['chars'].split(' ');
+            Array.prototype.push.apply(chars, more);
+        });
+        var poy = new Charpoy(shuffle(chars));
         poy.update();
         poy.fill();
 
